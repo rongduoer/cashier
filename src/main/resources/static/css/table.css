@@ -1,0 +1,29 @@
+.功能区 {
+    display: block;
+    padding: 16px;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #000;
+    width: 100%;
+}
+
+th {
+    background-color: blue;
+    text-align: center;
+    padding: 4px 0;
+}
+
+td {
+    text-align: center;
+    padding: 4px 0;
+}
+
+tr:nth-child(even) {
+    background-color: bisque;
+}
+
+tr:nth-child(odd) {
+    background-color: chartreuse;
+}

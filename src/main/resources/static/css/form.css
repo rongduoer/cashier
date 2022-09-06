@@ -1,0 +1,40 @@
+form {
+    background-color: rgba(255, 255, 255, .7);
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #000;
+
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+form > * {
+    margin: 8px 0;
+}
+
+label {
+    width: 100%;
+}
+
+input {
+    width: 100%;
+}
+
+input {
+    padding: 4px 8px;
+    outline: none;
+    height: 28px;
+    border-radius: 4px;
+    border: 1px solid #000;
+}
+
+button {
+    outline: none;
+    height: 28px;
+    border-radius: 4px;
+    border: 1px solid #000;
+    background-color: bisque;
+}

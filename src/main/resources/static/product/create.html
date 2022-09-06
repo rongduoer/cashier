@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+  <meta charset="UTF-8">
+  <title>商品上架</title>
+</head>
+<body>
+  <form method="post" action="/product/create.do">
+    <label>
+      <input type="text" name="name" placeholder="商品名称">
+    </label>
+    <label>
+      <input type="text" name="introduce" placeholder="商品介绍">
+    </label>
+    <label>
+      <input type="text" name="stock" placeholder="商品库存">
+    </label>
+    <label>
+      <input type="text" name="unit" placeholder="商品单位">
+    </label>
+    <label>
+      <input type="text" name="price" placeholder="商品价格，最小单位是分，也就是小数点后两位">
+    </label>
+    <label>
+      <input type="text" name="discount" placeholder="商品折扣，大于 0 小于等于 100 的值">
+    </label>
+    <button>上架</button>
+  </form>
+</body>
+</html>

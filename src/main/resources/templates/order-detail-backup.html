@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-hans" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div>
+    <span>【用户名称】：</span>
+    <span th:text="${order.username}"></span>
+  </div>
+
+
+  <div>
+    <span>【订单编号】：</span>
+    <span th:text="${order.uuid}"></span>
+  </div>
+
+
+  <div>
+    <span>【订单状态】：</span>
+    <span th:text="${order.status}"></span>
+  </div>
+
+
+  <div>
+    <span>【创建时间】：</span>
+    <span th:text="${order.createdAt}"></span>
+  </div>
+
+
+  <div>
+    <span>【应付金额】：</span>
+    <span th:text="${order.payable}"></span>
+  </div>
+
+
+  <div>
+    <span>【实付金额】：</span>
+    <span th:text="${order.actual}"></span>
+  </div>
+
+  <!-- 只有在订单处于未支付状态时，这个 div 才会被添加 -->
+  <div th:if="${order.status} eq '未支付'">
+    <a th:href="'/order/confirm/' + ${order.orderId}">确认</a>
+    <a th:href="'/order/cancel/' + ${order.orderId}">取消</a>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>编号</th>
+        <th>名称</th>
+        <th>单价</th>
+        <th>数量</th>
+        <th>单位</th>
+        <th>应付</th>
+        <th>实付</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- 这个写法是 thymeleaf 的语法，遍历每个 order-items 项，进行展示（一个 <tr>） -->
+      <tr th:each="item : ${order.itemList}">
+        <td th:text="${item.id}"></td>
+        <td th:text="${item.name}"></td>
+        <td th:text="${item.price}"></td>
+        <td th:text="${item.number}"></td>
+        <td th:text="${item.unit}"></td>
+        <td th:text="${item.payable}"></td>
+        <td th:text="${item.actual}"></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

@@ -1,0 +1,17 @@
+.基本信息 {
+    background-color: rgba(255, 255, 255, .7);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.下一步 {
+    padding: 8px;
+}
+
+.下一步 a {
+    background-color: rgba(255, 255, 255, .7);
+}
+
+.功能区 > * {
+    margin: 16px 0;
+}

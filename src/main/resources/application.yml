@@ -1,0 +1,19 @@
+spring:
+  main:
+    log-startup-info: false
+    banner-mode: off
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/cashier?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+logging:
+  level:
+    root: warn
+    com.rongduo: debug
+mybatis:
+  mapper-locations: classpath:/mapper/**Mapper.xml
+  configuration:
+    # underscore: 下划线
+    # camel: 骆驼
+    # camel-case: 驼峰形式
+    map-underscore-to-camel-case: true
